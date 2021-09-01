@@ -1,7 +1,3 @@
-![306px-ISO_C++_Logo.svg](C:\Users\epmsimm\OneDrive - Volkswagen AG\Imagens\306px-ISO_C++_Logo.svg.png)
-
-
-
 # Bem vindo ao jogo da forca!
 
 Este jogo é parte das atividades ministradas no curso C++ da ALURA.
