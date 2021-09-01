@@ -1,4 +1,6 @@
-#include <string>
-#include <map>
+#include<string>
+#include<map>
 
-void imprime_palavra(std::string& palavra_secreta, std::map<char, bool>& chutou);
+using namespace std;
+
+void imprime_palavra(string palavra_secreta, map<char, bool> chutou);

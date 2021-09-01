@@ -1,16 +1,28 @@
-#include <iostream>
-#include <string>
-#include <map>
-#include <vector>
-#include "imprime_cabecalho.hpp"
-#include "le_arquivo.hpp"
-#include "sorteia_palavra.hpp"
-#include "chuta.hpp"
+/*
+ * ALURA
+ * Data: 24.07.2021
+ * Curso: C++
+ * Compilar:	g++ nomeDoArquivo.hpp -o nomeDoArquivo.out -std=c++11
+ * 				mingw32-make.exe nomeDoArquivo
+ * asdfasdf
+ */
+
+// Bibliotecas incluídas neste arquivo
+#include<string>
+#include<iostream>
+#include<map>
+#include<vector>
+#include<fstream>
+#include<ctime>
+#include<cstdlib>
+
 #include "imprime_erros.hpp"
 #include "imprime_palavra.hpp"
+#include "imprime_cabecalho.hpp"
 #include "chuta.hpp"
 #include "adiciona_palavra.hpp"
 #include "nao_acertou.hpp"
+#include "sorteia_palavra.hpp"
 
 using namespace std;
 
@@ -18,36 +30,39 @@ string palavra_secreta;
 map<char, bool> chutou;
 vector<char> chutes_errados;
 
-int main()
-{
-    imprime_cabecalho();
+int main (){
 
-    palavra_secreta = sorteia_palavra();
+	imprime_cabecalho();
 
-    while(nao_acertou(palavra_secreta, chutou) && chutes_errados.size() < 5) {
-        imprime_erros(chutes_errados);
+	palavra_secreta = sorteia_palavra();
 
-        imprime_palavra(palavra_secreta, chutou);
+	while(nao_acertou(palavra_secreta, chutou) && chutes_errados.size() < 5){
+		
+		imprime_erros(chutes_errados);
+		imprime_palavra(palavra_secreta, chutou);
+		chuta(&chutou, &chutes_errados);
+		
+	} // Fim do laço de repetição while
 
-        chuta(chutou, chutes_errados, palavra_secreta);
-    }
+	if(nao_acertou(palavra_secreta, chutou)){
+		cout << "Voce perdeu! Tente novamente";
+	} 
+	else {
+		cout << "Parabens! Voce acertou! A palavra secreta era " << palavra_secreta << "." << endl;
 
-    cout << "Fim de jogo!" << endl;
-    cout << "A palavra secreta era: " << palavra_secreta << endl;
+		cout << "Voce deseja adicionar uma nova palavra ao banco? (S/N) ";
+		
+		char resposta;
+		cin >> resposta;
 
-    if(nao_acertou(palavra_secreta, chutou)){
-        cout << "Você perdeu! Tente novamente!" << endl;
-    }
-    else{
-        cout << "Parabéns! Você acertou a palavra secreta!" << endl;
+		if(resposta == 'S'){
+			adiciona_palavra();
+		}
+	}
+	
+	cout << endl;
+	cout << "FIM DE JOGO!" << endl;
+	
+	return 0;
 
-        cout << "Você deseja adicionar uma nova palavra ao banco? (S/N) ";
-        char resposta;
-        cin >> resposta;
-        if(resposta == 'S'){
-            adiciona_palavra();
-        }
-    }
-
-    cin.get();
-}
+} // Fim da classe main

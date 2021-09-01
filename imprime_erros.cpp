@@ -1,11 +1,12 @@
-#include <iostream>
+#include<iostream>
 #include "imprime_erros.hpp"
 
-void imprime_erros(const std::vector<char>& chutes_errados)
-{
-    std::cout << "Chutes errados: ";
-    for (char letra: chutes_errados) {
-        std::cout << letra << " ";
-    }
-    std::cout << std::endl;
-}
+using namespace std;
+
+void imprime_erros(vector<char> chutes_errados){
+	cout << "Chutes errados: ";
+	for (char letra : chutes_errados){
+		cout << letra << " ";
+	}
+	cout << endl;
+} // Fim da função imprime_erros

@@ -1,20 +1,24 @@
-#include <iostream>
-#include <fstream>
-#include "salva_arquivo.hpp"
+#include<iostream>
+#include<fstream>
+#include"salva_arquivo.hpp"
 
-void salva_arquivo(std::vector<std::string> nova_lista){
-    std::ofstream arquivo;
-    arquivo.open("palavras.txt");
-    if(arquivo.is_open()){
-        arquivo << nova_lista.size() << std::endl;
+using namespace std;
 
-        for(std::string palavra : nova_lista){
-            arquivo << palavra << std::endl;
-        }
-        arquivo.close();
-    }
-    else{
-        std::cout << "Não foi possível acessar o banco de palavras." << std::endl;
-        exit(0);
-    }
-}
+void salva_arquivo(vector<string> nova_lista){
+	ofstream arquivo;
+	arquivo.open("palavras.txt");
+
+	if(arquivo.is_open()){
+		arquivo << nova_lista.size() << endl;
+
+		for(string palavra : nova_lista){
+			arquivo << palavra << endl;
+		}
+		arquivo.close();
+	}
+	else{
+		cout << "Não foi possível acessar o banco de palavras." << endl;
+		exit(0);
+	}
+
+} // Fim da função salva_arquivo

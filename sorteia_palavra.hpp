@@ -1,3 +1,5 @@
-#include <string>
+#include<string>
 
-std::string sorteia_palavra();
+using namespace std;
+
+string sorteia_palavra();
