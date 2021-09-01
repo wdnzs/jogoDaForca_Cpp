@@ -2,8 +2,6 @@
  * ALURA
  * Data: 24.07.2021
  * Curso: C++
- * Compilar:	g++ nomeDoArquivo.hpp -o nomeDoArquivo.out -std=c++11
- * 				mingw32-make.exe nomeDoArquivo
  * 
  */
 
