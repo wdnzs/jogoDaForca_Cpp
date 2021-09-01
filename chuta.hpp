@@ -3,4 +3,4 @@
 
 using namespace std;
 
-void chuta(map<char, bool>* chutou, vector<char>* chutes_errados);
+void chuta(map<char, bool>& chutou, vector<char>& chutes_errados, string& palavra_secreta);

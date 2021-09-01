@@ -13,9 +13,9 @@ void chuta(map<char, bool>* chutou, vector<char>* chutes_errados){
 	char chute;
 	cin >> chute;
 
-	(*chutou)[chute] = true;
+	chutou[chute] = true;
 
-	if(letra_existe(chute)){
+	if(letra_existe(chute, palavra_secreta)){
 		cout << "Voce acertou! Seu chute esta na palavra." << endl;
 	} 
 	else {

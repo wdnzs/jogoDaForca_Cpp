@@ -37,7 +37,7 @@ int main (){
 		
 		imprime_erros(chutes_errados);
 		imprime_palavra(palavra_secreta, chutou);
-		chuta(&chutou, &chutes_errados);
+		chuta(chutou, chutes_errados, palavra_secreta);
 		
 	} // Fim do laço de repetição while
 
