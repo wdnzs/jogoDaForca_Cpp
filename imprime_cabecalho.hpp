@@ -1,10 +1,9 @@
-#include<iostream>
+#include <iostream>
 
-using namespace std;
-
-inline void imprime_cabecalho(){
-	cout << "*********************" << endl;
-	cout << "*** JOGO DA FORCA ***" << endl;
-	cout << "*********************" << endl;
-	cout << endl;
-} // Fim da função imprime_cabecalho
+inline void imprime_cabecalho()
+{
+    std::cout << "*********************" << std::endl;
+    std::cout << "*** JOGO DA FORCA ***" << std::endl;
+    std::cout << "*********************" << std::endl;
+    std::cout << std::endl;
+}

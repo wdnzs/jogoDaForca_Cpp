@@ -1,6 +1,3 @@
-#include<vector>
-#include<string>
-using namespace std;
+#include <vector>
 
-
-void imprime_erros(const vector<char>& chutes_errados);
+void imprime_erros(const std::vector<char>& chutes_errados);

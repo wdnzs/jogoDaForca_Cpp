@@ -1,6 +1,4 @@
-#include<map>
-#include<vector>
+#include <map>
+#include <vector>
 
-using namespace std;
-
-void chuta(map<char, bool>& chutou, vector<char>& chutes_errados, string& palavra_secreta);
+void chuta(std::map<char, bool>& chutou, std::vector<char>& chutes_errados, std::string& palavra_secreta);

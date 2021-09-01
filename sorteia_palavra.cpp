@@ -1,18 +1,12 @@
-#include<iostream>
-#include<vector>
-#include<ctime>
-#include<string>
-
+#include <vector>
 #include "le_arquivo.hpp"
-#include "sorteia_palavra.hpp"
 
-using namespace std;
+std::string sorteia_palavra()
+{
+    std::vector<std::string> palavras = le_arquivo();
 
-string sorteia_palavra(){
-	vector<string> palavras = le_arquivo();
+    srand(time(NULL));
+    int indice_sorteado = rand() % palavras.size();
 
-	srand(time(NULL));
-	int indice_sorteado = rand() % palavras.size();
-
-	return palavras[indice_sorteado];
-} // Fim da função sorteia_palavra
+    return palavras[indice_sorteado];
+}

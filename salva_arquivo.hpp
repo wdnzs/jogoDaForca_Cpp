@@ -1,6 +1,4 @@
-#include<string>
-#include<vector>
+#include <vector>
+#include <string>
 
-using namespace std;
-
-void salva_arquivo(vector<string> nova_lista);
+void salva_arquivo(std::vector<std::string> nova_lista);

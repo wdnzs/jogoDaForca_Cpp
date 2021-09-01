@@ -1,27 +1,21 @@
-#include<iostream>
-#include<string>
-#include<map>
-#include<vector>
-
-#include "letra_existe.hpp"
+#include <iostream>
 #include "chuta.hpp"
+#include "letra_existe.hpp"
 
-using namespace std;
+void chuta(std::map<char, bool>& chutou, std::vector<char>& chutes_errados, std::string& palavra_secreta)
+{
+    std::cout << "Seu chute: ";
+    char chute;
+    std::cin >> chute;
 
-void chuta(map<char, bool>* chutou, vector<char>* chutes_errados){
-	cout << "Seu chute: ";
-	char chute;
-	cin >> chute;
+    chutou[chute] = true;
 
-	chutou[chute] = true;
-
-	if(letra_existe(chute, palavra_secreta)){
-		cout << "Voce acertou! Seu chute esta na palavra." << endl;
-	} 
-	else {
-		cout << "Voce errou! Seu chute nao esta na palavra." << endl;
-		chutes_errados->push_back(chute);
-	} // Fim da condição if
-
-	cout << endl;
-} // Fim da função chuta
+    if(letra_existe(chute, palavra_secreta)) {
+        std::cout << "Você acertou! Seu chute está na palavra." << std::endl;
+    }
+    else{
+        std::cout << "Você errou! Seu chute não está na palavra." << std::endl;
+        chutes_errados.push_back(chute);
+    }
+    std::cout << std::endl;
+}

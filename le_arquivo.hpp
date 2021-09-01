@@ -1,7 +1,5 @@
 #pragma once
-#include<string>
-#include<vector>
+#include <vector>
+#include <string>
 
-using namespace std;
-
-vector<string> le_arquivo();
+std::vector<std::string> le_arquivo();
