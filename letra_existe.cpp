@@ -1,11 +1,12 @@
 #include<iostream>
 #include<string>
+#include "letra_existe.hpp"
 
 using namespace std;
 
-extern string palavra_secreta;
 
-bool letra_existe(char chute){
+
+bool letra_existe(char chute, string& palavra_secreta){
 	
 	for(char letra : palavra_secreta){
 		

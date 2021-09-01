@@ -3,7 +3,7 @@
 
 using namespace std;
 
-void imprime_erros(vector<char> chutes_errados){
+void imprime_erros(const vector<char>& chutes_errados){
 	cout << "Chutes errados: ";
 	for (char letra : chutes_errados){
 		cout << letra << " ";
