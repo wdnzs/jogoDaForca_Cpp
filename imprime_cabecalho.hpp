@@ -1,1 +1,11 @@
-void imprime_cabecalho();
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+void imprime_cabecalho(){
+	cout << "*********************" << endl;
+	cout << "*** JOGO DA FORCA ***" << endl;
+	cout << "*********************" << endl;
+	cout << endl;
+} // Fim da função imprime_cabecalho
