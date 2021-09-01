@@ -4,7 +4,7 @@
  * Curso: C++
  * Compilar:	g++ nomeDoArquivo.hpp -o nomeDoArquivo.out -std=c++11
  * 				mingw32-make.exe nomeDoArquivo
- * asdfasdf
+ * 
  */
 
 // Bibliotecas incluídas neste arquivo
@@ -12,9 +12,6 @@
 #include<iostream>
 #include<map>
 #include<vector>
-#include<fstream>
-#include<ctime>
-#include<cstdlib>
 
 #include "imprime_erros.hpp"
 #include "imprime_palavra.hpp"
