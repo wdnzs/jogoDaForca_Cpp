@@ -4,6 +4,7 @@
 #include<string>
 
 #include "le_arquivo.hpp"
+#include "sorteia_palavra.hpp"
 
 using namespace std;
 
