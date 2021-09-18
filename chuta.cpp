@@ -8,19 +8,19 @@
 
 using namespace std;
 
-void chuta(map<char, bool>* chutou, vector<char>* chutes_errados){
+void chuta(map<char, bool>& chutou, vector<char>& chutes_errados){
 	cout << "Seu chute: ";
 	char chute;
 	cin >> chute;
 
-	(*chutou)[chute] = true;
+	chutou[chute] = true;
 
 	if(letra_existe(chute)){
 		cout << "Voce acertou! Seu chute esta na palavra." << endl;
 	} 
 	else {
 		cout << "Voce errou! Seu chute nao esta na palavra." << endl;
-		chutes_errados->push_back(chute);
+		chutes_errados.push_back(chute);
 	} // Fim da condição if
 
 	cout << endl;

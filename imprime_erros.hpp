@@ -3,4 +3,4 @@
 using namespace std;
 
 
-void imprime_erros(vector<char> chutes_errados);
+void imprime_erros(const vector<char> chutes_errados);
