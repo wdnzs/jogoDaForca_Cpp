@@ -7,7 +7,10 @@
 
 using namespace std;
 
+extern  vector<char> chutes_errados;
+
 string sorteia_palavra(){
+
 	vector<string> palavras = le_arquivo();
 
 	srand(time(NULL));
